@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artemis II - Viðburðir</title>
+    <link rel="icon" href="myndir/Logo.svg" type="image/png">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pico.zinc.css">
+    <link rel="stylesheet" href="css/custom.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <label for="menutoggle" class="menu-btn">&#9776;</label>
+    <input type="checkbox" id="menutoggle" class="menu-btn">
+
+    <header>
+        <img src="myndir/Logo.svg" alt="Nasa Svg" class="SVG">
+        <h1>Artemis II</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html" class="AnimatedLink">Heim</a></li>
+            <li><a class="AnimatedLink" id="ShowDialog"><span class="icon-pencil"></span> Innskráning</a></li>
+            <li><a href="https://www.nasa.gov/">Nasa</a></li>
+        </ul>
+    </nav>
+
+    <section class="grid Middle">
+        <section class="small">
+            <article>
+                <h3 class="White">Viðburðir</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nafn</th>
+                            <th>Tímasetning</th>
+                            <th>Verð</th>
+                            <th>Panta</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="Nafn">Ferð</td>
+                            <td data-label="Tímasetning">12.3.2026</td>
+                            <td data-label="Verð">11.00 kr</td>
+                            <td data-label=""><input type="button" id="ShowDialogInput" class="AnimatedButton"
+                                    value="Panta">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-label="Nafn">Ferð</td>
+                            <td data-label="Tímasetning">27.3.2026</td>
+                            <td data-label="Verð">12.500 kr</td>
+                            <td data-label=""><input type="button" id="ShowDialogInput2" class="AnimatedButton"
+                                    value="Panta">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-label="Nafn">Ferð</td>
+                            <td data-label="Tímasetning">3.4.2026</td>
+                            <td data-label="Verð">9.600 kr</td>
+                            <td data-label=""><input type="button" id="ShowDialogInput3" class="AnimatedButton"
+                                    value="Panta">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+            <article>
+                <h3 class="White">Vörur</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nafn</th>
+                            <th></th>
+                            <th>Verð</th>
+                            <th>Kaupa</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="Nafn">Nasa bolli</td>
+                            <td data-label="Vara"><img src="myndir/Bollar.webp" alt="bolli" class="Mynd"></td>
+                            <td data-label="Verð">6.700 kr</td>
+                            <td data-label=""><input type="button" id="ShowDialogInput4" class="AnimatedButton"
+                                    value="Kaupa">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-label="Nafn">Nasa Stutterma bolur</td>
+                            <td data-label="Vara"><img src="myndir/Bolur.webp" alt="bolli" class="Mynd"></td>
+                            <td data-label="Verð">12.000 kr</td>
+                            <td data-label=""><input type="button" id="ShowDialogInput5" class="AnimatedButton"
+                                    value="Kaupa">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-label="Nafn">Nasa Derhufa</td>
+                            <td data-label="Vara"><img src="myndir/Derhufa.webp" alt="bolli" class="Mynd"></td>
+                            <td data-label="Verð">12.000 kr</td>
+                            <td data-label=""><input type="button" id="ShowDialogInput6" class="AnimatedButton"
+                                    value="Kaupa">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+        </section>
+    </section>
+
+    <dialog id="myDialog">
+        <article>
+            <header>
+                <button aria-label="Close" rel="prev" id="closeDialog"></button>
+                <p>Sláðu inn notendanafn og lykilorð</p>
+            </header>
+            <form action="sida2.html" method="get">
+                <label for="user">Notendanafn</label>
+                <input type="text" id="user" placeholder="Name" required>
+
+                <label for="passw">Lykilorð</label>
+                <input type="password" id="passw" placeholder="Password" required>
+
+                <input type="submit" value="Innskráning" class="AnimatedButton Innbutton">
+            </form>
+        </article>
+    </dialog>
+
+    <footer class="Middle grid">
+        <div>
+            <h4>Nemandi</h4>
+            <dl><!--Description list-->
+                <dt>Nafn:</dt>
+                <dd>Kjartan Vöggur Steinarsson</dd>
+                <dt>Áfangi:</dt>
+                <dd>VEF2VH05BU</dd>
+                <dt>Kennari:</dt>
+                <dd>Karl Ágústsson</dd>
+            </dl>
+        </div>
+        <div>
+            <h4>Heimildir</h4>
+            <dl>
+                <dt>Myndir teknar af:</dt>
+                <dd>Netinu</dd>
+                <dd><a href="https://www.shopnasa.com/collections/artemis-ii">Nasa</a></dd>
+                <dt>Texti tekinn frá:</dt>
+                <dd><a href="https://en.wikipedia.org/wiki/Artemis_II">Wikipedia</a></dd>
+            </dl>
+        </div>
+        <div>
+            <a href="https://x.com">
+                <span class="icon-x"></span>
+            </a>
+            <a href="https://fb.com">
+                <span class="icon-facebook"></span>
+            </a>
+            <a href="https://youtube.com">
+                <span class="icon-youtube"></span>
+            </a>
+        </div>
+        <div>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11785.393328160277!2d-80.64883528400748!3d28.575215428468614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e74b95a365c6fd%3A0x8b7339f246f869dd!2sJohn%20F.%20Kennedy%20Space%20Center!5e0!3m2!1sen!2sis!4v1772482832817!5m2!1sen!2sis"
+                width="250" height="225" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </footer>
+
+    <script>
+        const openButton = document.getElementById("ShowDialog");
+        const closeButton = document.getElementById("closeDialog");
+        const dialog = document.getElementById("myDialog")
+
+        function LogInDaemi() {
+            dialog.showModal();
+        }
+        const Takki1 = document.getElementById("ShowDialogInput").addEventListener("click", LogInDaemi)
+        const Takki2 = document.getElementById("ShowDialogInput2").addEventListener("click", LogInDaemi)
+        const Takki3 = document.getElementById("ShowDialogInput3").addEventListener("click", LogInDaemi)
+        const Takki4 = document.getElementById("ShowDialogInput4").addEventListener("click", LogInDaemi)
+        const Takki5 = document.getElementById("ShowDialogInput5").addEventListener("click", LogInDaemi)
+        const Takki6 = document.getElementById("ShowDialogInput6").addEventListener("click", LogInDaemi)
+
+
+        openButton.addEventListener("click", LogInDaemi)
+
+        closeButton.addEventListener("click", function () {
+            dialog.close();
+        });
+    </script>
+</body>
+
+</html>
